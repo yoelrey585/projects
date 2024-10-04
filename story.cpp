@@ -3,11 +3,11 @@
 #include <vector>
 #include <unistd.h>
 #include <Windows.h>
-#include <fstream> //Hawa Hardy
+#include <fstream> 
 using namespace std;
 
 //Creating file that saves game progress
-ofstream gamefile("GameProgress.txt"); //Hawa added
+ofstream gamefile("GameProgress.txt"); 
 
 class Profile {
     private:
@@ -49,8 +49,7 @@ class Game : public Profile {
 
         void intro() const {
             char smiley = 2;
-            //Hawa added \n and \t
-
+           
             cout << "\n\t\tWelcome " << you_are <<" "<< getName() << smiley << endl;
 
             string arr[] = {"\n\tOnce upon a time,", "there was an explorer named ",getName(), " who set out on an adventure with their trusted companions:", "a dwarf named", "Tyrion Lannister,", "a martial artist named", "Bruce Lee", "and a samurai named", " Akira.", " They were on a mission to find a lost treasure, but as they trekked through the dense forest, they realized they were lost.", "\n\n\tAs they searched for a way out, they stumbled upon a riddle that hinted at a key to unlock the path to their escape.",  " The riddle led them deep into the heart of the forest, and they encountered many challenges and obstacles along the way.", " The hazardous zone, which was covered", "in poisonous plants,", "was the first barrier they had to cross.", "\n\n\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n AT THE HAZARDOUS ZONE.\n", "A. Use a machete to clear vines\n", "B. Use hands to clear vines\n"};
@@ -63,7 +62,7 @@ class Game : public Profile {
                 sleep(1);
                 cout << x << " " ;}
 
-                //Hawa added, for loop below stores string arr into "GameProgress" text file
+        
             for (int j=0; j<n; j++)
             {
                 gamefile << arr[j];
@@ -94,7 +93,7 @@ class Game : public Profile {
                     for(string x : my_printout1){
                         sleep(1);
                         cout << x << " " ;}
-                        //Hawa added, for loop below stores string arr2 into "GameProgress" text file
+                        
                     for (int j=0; j<n; j++)
                     {
                         gamefile << arr2[j];
@@ -114,7 +113,7 @@ class Game : public Profile {
                         sleep(1);
                         cout << x << " " ;}
 
-                    //Hawa added, for loop below stores string arr2 into "GameProgress" text file
+                  
                     for (int j=0; j<n; j++)
                     {
                         gamefile << arr2[j];
@@ -135,7 +134,7 @@ class Game : public Profile {
                 sleep(1);
                 cout << x << " " ;}
 
-                //Hawa added, for loop below stores string arr into "GameProgress" text file
+              
                     for (int j=0; j<n; j++)
                     {
                         gamefile << arr[j];
@@ -158,7 +157,7 @@ class Game : public Profile {
                         sleep(1);
                         cout << x << " " ;}
 
-                        //Hawa added, for loop below stores string arr2 into "GameProgress" text file
+                   
                     for (int j=0; j<n; j++)
                     {
                         gamefile << arr2[j];
@@ -178,7 +177,7 @@ class Game : public Profile {
                         sleep(1);
                         cout << x << " " ;}
 
-                    //Hawa added, for loop below stores string arr2 into "GameProgress" text file
+                  
                     for (int j=0; j<n; j++)
                     {
                         gamefile << arr2[j];
@@ -198,7 +197,7 @@ class Game : public Profile {
                 sleep(1);
                 cout << x << " " ;}
 
-                //Hawa added, for loop below stores string above into "GameProgress" text file
+         
                     for (int j=0; j<n; j++)
                     {
                         gamefile << arr[j];
@@ -221,7 +220,7 @@ class Game : public Profile {
                         sleep(1);
                         cout << x << " " ;}
 
-                    //Hawa added, for loop below stores string arr2 into "GameProgress" text file
+                   
                     for (int j=0; j<n; j++)
                     {
                         gamefile << arr2[j];
@@ -241,7 +240,7 @@ class Game : public Profile {
                         sleep(1);
                         cout << x << " " ;}
 
-                    //Hawa added, for loop below stores string arr2 into "GameProgress" text file
+                    
                     for (int j=0; j<n; j++)
                     {
                         gamefile << arr2[j];
@@ -269,7 +268,7 @@ int main() {
     cout << " (='.'=)      *   Journey to the West~  *     (')_(')\n";
     cout << " (')_(')      ***************************\n\n";
     do {
-        //Hawa added \n before 1st cout
+       
         cout << "\nChoose an option:\n";
         cout << "1. Create a new profile\n";
         cout << "2. Play\n";
@@ -302,9 +301,7 @@ int main() {
                 cout << "Profile found with name " << profile.getName() << endl;
 
                 Game play(profile.getName(), "explorer");
-                //Hawa added system clear screen
-               // system("cls");
-
+             
 
                 play.intro();
                 cout << "\tChoose your option (a or b)" << endl;
